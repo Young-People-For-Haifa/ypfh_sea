@@ -1,4 +1,3 @@
-import logging
 import os
 from flask import Flask, render_template, request, session
 from flask_babel import Babel
