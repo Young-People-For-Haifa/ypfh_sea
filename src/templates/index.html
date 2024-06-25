@@ -2,12 +2,20 @@
 {% block content %}
 
 <div class="relative flex flex-col justify-between min-h-screen overflow-hidden bg-blend-darken">
-    <div class="flex justify-center">
-        <p class="header relative z-30 p-5 text-white text-center font-bold text-3xl md:text-4xl lg:text-7xl">{{
-            locale["title"] }}</p>
+    <div class="flex justify-end w-full">
+        <a class="relative text-white z-30 mr-5 mt-5 font-bold" href="{{ url_for('home', lang='en') }}">EN</a>
+        <a class="relative text-white z-30 mr-5 mt-5 font-bold" href="{{ url_for('home', lang='ru') }}">RU</a>
+        <a class="relative text-white z-30 mr-5 mt-5 font-bold" href="{{ url_for('home', lang='he') }}">HE</a>
     </div>
-    <div class="body flex flex-col justify-center items-center flex-grow">
-        <p class="relative z-30 p-5 text-white text-center text-base md:text-xl lg:text-2xl">{{ locale["description"] }}
+    <div class="flex justify-center">
+        <p dir="{{ 'rtl' if lang == 'he' else 'ltr' }}"
+            class="header relative z-30 p-5 text-white text-center font-bold text-3xl md:text-4xl lg:text-7xl">{{
+            _("%(title)s", title=locale["title"]) }}</p>
+    </div>
+    <div class="body flex flex-col justify-center items-center flex-grow mt-3 lg:mt-20">
+        <p dir="{{ 'rtl' if lang == 'he' else 'ltr' }}"
+            class="relative z-30 p-5 text-white text-center text-base md:text-xl lg:text-2xl">{{ _("%(description)s",
+            description=locale["description"]) }}
         </p>
         <div class="flex justify-center w-full">
             <iframe class="rounded-md relative z-30 lg:w-6/12 md:w-6/12 sm:w-full mt-3 lg:mt-20"

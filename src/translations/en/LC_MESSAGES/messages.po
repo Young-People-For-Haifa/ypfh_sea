@@ -1,0 +1,30 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-06-25 04:13+0300\n"
+"PO-Revision-Date: 2024-06-25 04:14+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.15.0\n"
+
+#: src/templates/index.html:7
+#, python-format
+msgid "%(title)s"
+msgstr "Sea For Haifa"
+
+#: src/templates/index.html:10
+#, python-format
+msgid "%(description)s"
+msgstr "If clean seas and beaches are important to you, join us! We at the NGO 'Youth for Haifa' are looking for volunteers to clean beaches and dive volunteers to clean up the sea. Fill out the form now and make your contribution to nature conservation!"
+
