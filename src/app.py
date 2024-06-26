@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request
 from flask_babel import Babel
 from src.locale import Config, default, en, he
 
@@ -17,14 +17,20 @@ babel = Babel(app, locale_selector=get_locale)
 
 @app.route("/")
 def home():
-    locale = get_locale()
-    if locale == "ru":
-        lang_code = "ru"
-    elif locale == "en":
-        lang_code = "en"
+    lang_code = request.args.get("lang", default=None)
+    if lang_code:
+        match lang_code:
+            case "ru":
+                locale = default
+            case "en":
+                locale = en
+            case "he":
+                locale = he
+            case _:
+                locale = default
     else:
-        lang_code = "he"
-    return render_template("index.html", locale=default, lang=lang_code)
+        locale = default
+    return render_template("index.html", locale=locale, lang=lang_code)
 
 
 app.run(debug=True)
