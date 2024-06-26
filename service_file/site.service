@@ -5,7 +5,7 @@ After=multi-user.target
 [Service]
 Type=simple
 WorkingDirectory=/srv/ypfh_sea
-ExecStart=/srv/ypfh_sea/.venv/bin/python3 waitress-serve --host 127.0.0.1 src:app
+ExecStart=/srv/ypfh_sea/.venv/bin/waitress-serve src:app
 RestartSec=10
 Restart=always
 
