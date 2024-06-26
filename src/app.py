@@ -31,6 +31,3 @@ def home():
     else:
         locale = default
     return render_template("index.html", locale=locale, lang=lang_code)
-
-
-app.run(debug=True)
