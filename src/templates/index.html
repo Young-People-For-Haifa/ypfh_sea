@@ -13,12 +13,12 @@
     <div class="flex justify-center">
         <p dir="{{ 'rtl' if lang == 'he' else 'ltr' }}"
             class="header relative z-30 text-white text-center font-bold text-3xl md:text-4xl lg:text-7xl">{{
-            _("%(title)s", title=locale["title"]) if not lang_code else locale["title"] }}</p>
+            locale["title"] }}</p>
     </div>
     <div class="body flex flex-col justify-center items-center flex-grow mt-3 lg:mt-15">
         <p dir="{{ 'rtl' if lang == 'he' else 'ltr' }}"
-            class="relative z-30 p-5 w-full sm:w-full md:w-8/12 lg:w-8/12 text-white text-center text-base md:text-xl lg:text-2xl">{{ _("%(description)s",
-            description=locale["description"]) if not lang_code else locale["description"] }}
+            class="relative z-30 p-5 w-full sm:w-full md:w-8/12 lg:w-8/12 text-white text-center text-base md:text-xl lg:text-2xl">
+            {{ locale["description"] }}
         </p>
         <div class="flex justify-center w-full">
             <iframe class="rounded-md relative z-30 w-full sm:w-full md:w-6/12 lg:w-6/12 mt-3 lg:mt-15"
